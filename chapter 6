@@ -1,0 +1,18 @@
+----------------------------------------------------------------joining image------------------------------------------------------------------------------------------------------import cv2
+import numpy as np
+
+# Load the image
+img = cv2.imread("image.jpg")
+
+# Stack images horizontally
+imgHor = np.hstack((img, img))
+
+# Stack images vertically
+imgVer = np.vstack((img, img))
+
+# Display the images
+cv2.imshow("Horizontal", imgHor)
+cv2.imshow("Vertical", imgVer)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
